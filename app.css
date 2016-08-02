@@ -1,0 +1,165 @@
+* {
+  text-align: center;
+}
+header {
+  text-align:center;
+  color: #4caf50;
+  padding: 20px;
+  background-color: #bc2140;
+}
+#jugScore {
+  color: yellow;
+  font-size: 18px;
+}
+#plaScore {
+  color: red;
+  font-size: 18px;
+}
+
+#cupScore {
+  color: blue;
+  font-size: 18px;
+}
+
+#forScore {
+  color: silver;
+  font-size: 18px;
+}
+
+#kniScore {
+  color: black;
+  font-size: 18px;
+}
+
+#scoreboard {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: ;
+}
+#vasScore {
+  color: green;
+  font-size: 18px;
+}
+
+
+#table1 {
+  border: 3px solid silver;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  width: 475px;
+  height: 475px;
+  background-color: #FFFFFF;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  transition-background: 500ms;
+}
+.fork {
+  background-color: silver;
+  width:4px;
+  height:20px;
+  z-index: 4;
+}
+#fork1 {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  transform: rotate(35deg);
+
+}
+#fork2 {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  transform: rotate(-55deg);
+}
+
+
+.knife {
+  background-color: black;
+  width:3px;
+  height:14px;
+  z-index: 4;
+}
+#knife1 {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+  transform: rotate(35deg);
+}
+.cup {
+  border: 1px solid black;
+  background: rgba(0, 0, 255, .50);
+  width: 30px;
+  height: 30px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 3;
+}
+#cup1 {
+  display: -webkit-flex;
+  display: flex;
+  align-self: flex-start;
+
+}
+#cup2 {
+  display: -webkit-flex;
+  display: flex;
+  align-self: flex-end;
+}
+.plate {
+  border: 1px solid black;
+  background: radial-gradient(white 50%, red);
+  width: 80px;
+  height: 80px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+#plate1 {
+  display: -webkit-flex;
+  display: flex;
+  align-self: flex-start;
+  margin: 1em;
+}
+#plate2 {
+  display: -webkit-flex;
+  display: flex;
+  align-self: flex-end;
+  margin: 1.5em;
+}
+#jug {
+  background: radial-gradient(white .25%, yellow);
+  border: 1px solid black;
+  width: 55px;
+  height: 55px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+#vase {
+  background: green;
+  border: 1px solid black;
+  width: 65px;
+  height: 65px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+
+
+
+button {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  font-family: "courier";
+
+ }
