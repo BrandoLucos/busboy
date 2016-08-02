@@ -161,5 +161,8 @@ button {
   display: flex;
   justify-content: center;
   font-family: "courier";
+ }
 
+ #elapsedTime {
+   color: white;
  }

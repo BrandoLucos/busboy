@@ -15,38 +15,38 @@
 
   <header><h1>BUSBOY</h1></header>
 
-<div id="scoreBoard">
-  <div id="jugScore">JUGS ___</div>
-  <div id="plaScore">PLATES ___</div>
-  <div id="cupScore">CUPS ___</div>
-  <div id="forScore">FORKS ___</div>
-  <div id="kniScore">KNIVES ___</div>
-  <div id="vasScore">VASES ___</div>
-  <div id="totScore"></div>
-</div>
-<div id="table1" border-radius=50%>
-    <div class="fork" id="fork1"></div>
-    <div class="fork" id="fork2"></div>
-    <div class="knife" id="knife1"></div>
-    <div class="cup" id="cup2"></div>
-    <div class="knife" id="knife2"></div>
-    <div class="plate" id="plate1"></div>
-    <div id="vase"></div>
-    <div class="plate" id="plate2"></div>
-    <div class="cup" id="cup1"></div>
-    <div id="jug"></div>
+  <div id="scoreBoard">
+    <div id="jugScore">JUGS ___</div>
+    <div id="plaScore">PLATES ___</div>
+    <div id="cupScore">CUPS ___</div>
+    <div id="forScore">FORKS ___</div>
+    <div id="kniScore">KNIVES ___</div>
+    <div id="vasScore">VASES ___</div>
+    <div id="totScore"></div>
+  </div>
+  <div id="table1" border-radius=50%>
+      <div class="fork" id="fork1"></div>
+      <div class="fork" id="fork2"></div>
+      <div class="knife" id="knife1"></div>
+      <div class="cup" id="cup2"></div>
+      <div class="knife" id="knife2"></div>
+      <div class="plate" id="plate1"></div>
+      <div id="vase"></div>
+      <div class="plate" id="plate2"></div>
+      <div class="cup" id="cup1"></div>
+      <div id="jug"></div>
+  </div>
 
-</div>
-
-
-  <button class="btn btn-primary btn-large" id="toggleButton";>Start1</button>
+  <div class="stopwatch">
+    <h4 id="elapsedTime">0</h4>
+    <button id="stopWatchButton" onclick="stopwatch.dispatch()" class="btn btn-primary btn-large">Start</button>
+  </div>
 
   <h3 id="statusMessage"></h3>
 
 
 
-
-<script type="text/javascript" src="bower_components/jQuery.dist/jquery.min.js"></script>
-<script type="text/javascript" src="app.js" defer></script>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="app.js" defer></script>
 </body>
 </html>

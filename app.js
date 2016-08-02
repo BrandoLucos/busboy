@@ -2,154 +2,79 @@ var lightItem = 15
 var mediumItem = 20
 var heavyItem = 35
 
-// var table1 = {
-// }
-var elms = document.getElementsById("toggleButton");
-for (var i = 0; i < 5000; i++) {
-    for (var j = 0, length = elms.length; j < length; j++) {
-        // nothing to do ...
+// Wait for DOM to be ready
+$(function() {
+  stopwatch.$elapsedTime = $('#elapsedTime');
+  stopwatch.$stopWatchButton = $('#stopWatchButton');
+  stopwatch.reset();
+});
+
+var game = {
+  calcScore: function() {
+    if (stopwatch.elapsedTime < 500) {
+      alert('You are fast');
     }
-}
-
-console.timeEnd("Loop time");
-
-
-getElementById("toggleButton").onclick = function()
-{function onFirstClick() {
-   if (!timer) {
-    timer = setInterval(3000);
-   .toggleButton.text('Stop');
-      }else {
-        clearInterval(timer);
-    timer = null;
-   .toggleButton.text('Start');
+    else if (stopwatch.elapsedTime < 1000) {
+      alert('Not bad');
+    }
+    else {
+      alert('Too slow');
+    }
   }
-  }
-}
-//onSecondClick stop timer
-//if timer is .85 - 1.15 seconds.
-//noitemsSpilled
-
-//if timer is less than .85 seconds
-//var heavyItems spill
-
-//if timer is greater than 1.15 seconds
-//varlightItems will spill
-
-//if timer is greater than 2 seconds
-//all items will spill
-
-//if timer is less than .25 seconds all items will spill
-//else all items spill
-
-//onsecond click
-//switch table state
-//total items
-//log total score to score board
-//log message
-//
-
-
-
-
-
-
-
-// addEventListener function(onClick) {
-//   console.log(GO!);
-// }
-
-// function myFunction() {
-//     alert('Hello');
-// }
-
-// toggleTimer function() {}
-
-
-// scoreBoard function() {}
-
-// togglePlayer: function() {
-//   this.currentPlayer = this.currentPlayer === '1' ? '2' : '1';
-// };
-
-function goToNextState() {
-  table1.nextState();
-}
-
-/*var game = {
-#table1 [],
-currentPlayer: '1',
-
-togglePlayer: function() {
-  this.currentPlayer = this.currentPlayer === '1' ? '2' : '1';
 };
 
-showCurrentPlayer: function() {
-  this.$statusMessage.text('Current Player: ' + this.currentPlayer);
+var stopwatch = {
 
-}
+  reset: function() {
+    this.startTime = null;
+    this.endTime = null;
+    this.elapsedTime = 0;
+    this.$stopWatchButton.text('Start');
+    this.mode = 'new';
+    this.render();
+  },
 
+  start: function() {
+    this.$stopWatchButton.text('Stop');
+    this.mode = 'started';
+    this.startTime = Date.now();
+    var that = this;
+    this.interval = setInterval(function() {
+      that.update();
+    }, 10);
+  },
 
+  stop: function() {
+    this.$stopWatchButton.text('Reset');
+    this.mode = 'stopped';
+    clearInterval(this.interval);
+    this.interval = null;
+    game.calcScore();
+  },
 
+  update: function() {
+    this.elapsedTime = Date.now() - this.startTime;
+    this.render();
+  },
 
+  render: function() {
+    this.$elapsedTime.text(this.elapsedTime / 1000);
+  },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-buildGameBoard: function() {
-
-  this.$statusMessage = $("#statusMessage");
-  this.showCurrentPlayer();
-
-
-  for (var r = 0; r < 3; r++) {
-    var $row = $("<div class='row'></div");
-    var row = [];
-    for (var c = 0; c < 3; c++) {
-      var $button = $('<button class="btn-lg cell" onClick=game.move(' +
-                     r + ',' + c + ')></button>');
-      row.push($button);
-      $row.append($button);
+  dispatch: function() {
+    switch(this.mode) {
+      case 'new':
+        this.start();
+        break;
+      case 'started':
+        this.stop();
+        break;
+      case 'stopped':
+        this.reset();
+        break;
+      default:
+        alert('We are in a broken mode: ' + this.mode);
+    }
   }
-  this.board.push(row);
-  $("#board").append($row);
- }
 };
 
-reset: function() {
-  $('.cell').text('?').removeClass()
-}
-
-
-
-/*var table =
-var c=document.getElementById("myTable");
-var ctx=c.getContext("2d");
-ctx.beginPath();
-ctx.arc(100,75,100,0,2*Math.PI);
-ctx.stroke();*/
