@@ -66,11 +66,11 @@ var stopwatch = {
 };
 var total = 0;
 
-var divOne = document.getElementById(2);
-divOne.style.display='hidden';
+// var divOne = document.getElementById(2);
+// divOne.style.display='hidden';
 
-var divTwo = document.getElementByClass(2);
-divOne.style.display='show';
+// var divTwo = document.getElementByClass(2);
+// divOne.style.display='show';
 
 function wonItAll() {
   if(total >= 500) {
