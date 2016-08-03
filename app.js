@@ -66,6 +66,12 @@ var stopwatch = {
 };
 var total = 0;
 
+var divOne = document.getElementById(2);
+divOne.style.display='hidden';
+
+var divTwo = document.getElementByClass(2);
+divOne.style.display='show';
+
 function wonItAll() {
   if(total >= 500) {
   alert('YOU WON IT ALL, KID!');
@@ -85,8 +91,8 @@ var game = {
     else if (stopwatch.elapsedTime < 2849 && stopwatch.elapsedTime > 2500) {
         total = (total + 60);
         document.getElementById('result').innerHTML = total;
-        divOne = document.getElementById('jug')
-         divOne.style.visibility = 'hidden';
+       // divOne = document.getElementById('jug' , 'vase')
+        //divTwo = document.getElementByClass('X3')
       alert('Too fast, youre making a mess kid!');
       wonItAll();
 
@@ -94,12 +100,16 @@ var game = {
     else if (stopwatch.elapsedTime > 3151 && stopwatch.elapsedTime < 3500) {
         total = (total + 40);
         document.getElementById('result').innerHTML = total;
+        //divOne = document.getElementById('fork1', 'fork2' , 'knife1', 'knife2')
+        //divTwo = document.getElementByClass('X1')
       alert('Too slow your gonna break something!');
       wonItAll();
 }
     else if (stopwatch.elapsedTime > 3500 || stopwatch.elapsedTime < 2500) {
         total = (total - 100);
         document.getElementById('result').innerHTML = total;
+        //divOne = document.getElementById('fork1', 'fork2','knife1','knife2','plate1','plate2','jug','vase')
+        //divTwo = document.getElementByClass('X1', 'X2' , 'X3')
       alert('I dont know if you caught a snag or what but its coming out of your check');
       wonItAll();
 }
