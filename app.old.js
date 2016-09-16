@@ -11,7 +11,7 @@
 // $button.click(startTimer)
 
 
-// getElementById("toggleButton").onclick = function()
+// document.getElementById("toggleButton").onclick = function()
 // {function onFirstClick() {
 //    if (timer === 0) {
 //     timer = setInterval(3000);
