@@ -7,11 +7,11 @@ You just got a new job at Papa Italianos restaurant and you need to bust a LOT o
 The easiest way to start to clean tables is to get these dirty table cloths out of the way. </br>
 You could spend all day, clearing tables, removing table cloths, or you could clear and clean tables at the same time without these pesky cloths in the way.
 Perfect your timing, and become the king of the BusBoys!
-
+>>>>>>>>
 ###TECHNOLOGY
 This app was built using the following technologies
   - HTML5 | CSS3 | JS | JQUERY | Twitter Bootstrap
-
+>>>>>>>>
 ###FEATURES
 
 Controlled with two buttons
@@ -27,6 +27,7 @@ More to come...
 
 # *FEEL FREE TO ASSIST* lol
 
+>>>>>>>>
 
 ### LINKS
 GitHub Page <a href="https://github.com/BrandoLucos/busboy">GitHub
