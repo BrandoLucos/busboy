@@ -1,6 +1,9 @@
 // var lightItem = 15
 // var mediumItem = 20
 // var heavyItem = 35
+stockPricesYesterday = [];
+
+
 
 $(function() {
     stopwatch.$elapsedTime = $('#elapsedTime');
