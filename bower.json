@@ -1,5 +1,5 @@
 {
-    "name": "Busboy",
+    "name": "busboy",
     "authors": [
         "Awesome <bc.lucas89@gmail.com>"
     ],
@@ -13,6 +13,7 @@
         "bower_components",
         "test",
         "tests"
+
     ],
     "dependencies": {
         "bootstrap": "^3.3.7"
