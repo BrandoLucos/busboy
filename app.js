@@ -4,6 +4,7 @@ $(function() {
     stopwatch.reset();
 });
 
+  // stopwatch with start, stop, reset, update and render functions
 
 var stopwatch = {
 
