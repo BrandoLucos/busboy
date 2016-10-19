@@ -14,7 +14,7 @@ var stopwatch = {
         this.$stopWatchButton.text('Start then stop on "3" secs');
         this.mode = 'new';
         this.render();
-        document.getElementById('table').hidden=false;
+
     },
 
     start: function() {
@@ -44,6 +44,8 @@ var stopwatch = {
         this.$elapsedTime.text(this.elapsedTime / 1000);
     },
 
+    // Stopwatch mode switch
+
     dispatch: function() {
         switch (this.mode) {
             case 'new':
@@ -67,59 +69,101 @@ var total = 0;
 var game = {
     calcScore: function() {
 
+        // BIG OL IF FUNCTION
+        //onSecondClick stop timer if timer is 3.151 - 2.849 seconds. **noitemsSpilled
+
         if (stopwatch.elapsedTime < 3151 && stopwatch.elapsedTime > 2849) {
             total = (total + 100);
             document.getElementById('result').innerHTML = total;
-            $.notify('Hey, good job that was near perfect\!');
+            alert('Hey, good job that was near perfect\!');
+
+            //if timer is less than 2.849 seconds and greater than 2.500 seconds var heavyItems spill
 
         } else if (stopwatch.elapsedTime < 2849 && stopwatch.elapsedTime > 2500) {
             total = (total + 60);
             document.getElementById('result').innerHTML = total;
-            document.getElementById('jug').hidden=true;
-            document.getElementById('vase').hidden=true;
-            document.getElementById('I').hidden=false;
-            document.getElementById('J').hidden=false;
-            document.getElementById('F').hidden=false;
-            document.getElementById('B').hidden=false;
+
+            var idsToHide = ['jug', 'vase'];
+            idsToHide.forEach(function(id) {
+                console.log('hiding id:', id);
+                document.getElementById(id).style.display = 'none';
+            });
+            setTimeout(function() {
+                idsToHide.forEach(function(id) {
+                    console.log('showing id:', id);
+                    document.getElementById(id).style.display = 'block';
+                });
+            }, 3000);
+            var idsToShow = ['C', 'B'];
+            idsToShow.forEach(function(id) {
+                console.log('showing id:', id);
+                document.getElementById(id).style.display = 'block';
+            });
+            setTimeout(function() {
+                idsToShow.forEach(function(id) {
+                    console.log('hiding id:', id);
+                    document.getElementById(id).style.display = 'none';
+                });
+            }, 3000);
             alert('Too fast, youre making a mess kid!');
+
+            //if timer is greater than 3.15 seconds and less than 3.500 seconds varlightItems spill
 
         } else if (stopwatch.elapsedTime > 3151 && stopwatch.elapsedTime < 3500) {
             total = (total + 40);
             document.getElementById('result').innerHTML = total;
-            document.getElementById('fork1').hidden=true;
-            document.getElementById('fork2').hidden=true;
-            document.getElementById('knife1').hidden=true;
-            document.getElementById('knife2').hidden=true;
-            document.getElementById('A').hidden=false;
-            document.getElementById('C').hidden=false;
-            document.getElementById('E').hidden=false;
-            document.getElementById('H').hidden=false;
-            alert('Too slow your gonna break something!');
+
+            var idsToHide = ['fork1', 'fork2', 'knife1', 'knife2'];
+            idsToHide.forEach(function(id) {
+                console.log('hiding id:', id);
+                document.getElementById(id).style.display = 'none';
+            });
+            setTimeout(function() {
+                idsToHide.forEach(function(id) {
+                    console.log('showing id:', id);
+                    document.getElementById(id).style.display = 'block';
+                });
+            }, 3000);
+            var idsToShow = ['J', 'C', 'G', 'H'];
+            idsToShow.forEach(function(id) {
+                console.log('showing id:', id);
+                document.getElementById(id).style.display = 'block';
+            });
+            setTimeout(function() {
+                idsToShow.forEach(function(id) {
+                    console.log('hiding id:', id);
+                    document.getElementById(id).style.display = 'none';
+                });
+            }, 3000);
+            alert('Too slow, your gonna break something!');
 
 
         } else if (stopwatch.elapsedTime > 3500 || stopwatch.elapsedTime < 2500) {
             total = (total - 100);
             document.getElementById('result').innerHTML = total;
-            document.getElementById('fork1').hidden=true;
-            document.getElementById('fork2').hidden=true;
-            document.getElementById('knife1').hidden=true;
-            document.getElementById('knife2').hidden=true;
-            document.getElementById('plate1').hidden=true;
-            document.getElementById('plate2').hidden=true;
-            document.getElementById('jug').hidden=true;
-            document.getElementById('vase').hidden=true;
-            document.getElementById('cup1').hidden=true;
-            document.getElementById('cup2').hidden=true;
-            document.getElementById('A').hidden=false;
-            document.getElementById('B').hidden=false;
-            document.getElementById('C').hidden=false;
-            document.getElementById('D').hidden=false;
-            document.getElementById('E').hidden=false;
-            document.getElementById('F').hidden=false;
-            document.getElementById('G').hidden=false;
-            document.getElementById('H').hidden=false;
-            document.getElementById('I').hidden=false;
-            document.getElementById('J').hidden=false;
+
+            var idsToHide = ['fork1', 'fork2', 'knife1', 'knife2', 'cup1', 'cup2', 'vase', 'jug', 'plate1', 'plate2'];
+            idsToHide.forEach(function(id) {
+                console.log('hiding id:', id);
+                document.getElementById(id).style.display = 'none';
+            });
+            setTimeout(function() {
+                idsToHide.forEach(function(id) {
+                    console.log('showing id:', id);
+                    document.getElementById(id).style.display = 'block';
+                });
+            }, 3000);
+            var idsToShow = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+            idsToShow.forEach(function(id) {
+                console.log('showing id:', id);
+                document.getElementById(id).style.display = 'block';
+            });
+            setTimeout(function() {
+                idsToShow.forEach(function(id) {
+                    console.log('hiding id:', id);
+                    document.getElementById(id).style.display = 'none';
+                });
+            }, 3000);
             alert('I dont know if you caught a snag or what but its coming out of your check');
         }
     }
