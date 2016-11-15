@@ -2,6 +2,7 @@
   text-align: center;
 }
 header {
+  height: 30px;
   text-align:center;
   color: #4caf50;
   padding: 20px;
@@ -21,10 +22,11 @@ height: 30px;
 width: 30px;
 }
 
-.btn btn-primary {
+/*.btn btn-primary {
+  display:flex;
   align-self: :center;
 
-}
+}*/
 #A {
   position:absolute;
   margin-top: 12em;
@@ -100,8 +102,6 @@ width: 30px;
 
 #scoreboard {
   display: -webkit-flex;
-  display: flex;
-  flex-direction: ;
 }
 #vasScore {
   color: green;
@@ -235,8 +235,10 @@ width: 30px;
  font-family: "courier";
  }
  #stopWatchButton {
-  position: absolute;
-  width: 250px;
+  display: flex;
+  justify-content: center;
+  /*position: absolute;*/
+  width: auto;
  }
 
  #elapsedTime {

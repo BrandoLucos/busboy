@@ -94,7 +94,7 @@ var game = {
                     console.log('showing id:', id);
                     document.getElementById(id).style.display = 'block';
                 });
-            }, 3000);
+            }, 3500);
             var idsToShow = ['C', 'B'];
             idsToShow.forEach(function(id) {
                 console.log('showing id:', id);
@@ -105,7 +105,7 @@ var game = {
                     console.log('hiding id:', id);
                     document.getElementById(id).style.display = 'none';
                 });
-            }, 3000);
+            }, 3500);
             alert('Too fast, youre making a mess kid!');
 
             //if timer is greater than 3.15 seconds and less than 3.500 seconds varlightItems spill
@@ -124,7 +124,7 @@ var game = {
                     console.log('showing id:', id);
                     document.getElementById(id).style.display = 'block';
                 });
-            }, 3000);
+            }, 3500);
             var idsToShow = ['J', 'C', 'G', 'H'];
             idsToShow.forEach(function(id) {
                 console.log('showing id:', id);
@@ -135,7 +135,7 @@ var game = {
                     console.log('hiding id:', id);
                     document.getElementById(id).style.display = 'none';
                 });
-            }, 3000);
+            }, 3500);
             alert('Too slow, your gonna break something!');
 
 
@@ -153,7 +153,7 @@ var game = {
                     console.log('showing id:', id);
                     document.getElementById(id).style.display = 'block';
                 });
-            }, 3000);
+            }, 3500);
             var idsToShow = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
             idsToShow.forEach(function(id) {
                 console.log('showing id:', id);
@@ -164,7 +164,7 @@ var game = {
                     console.log('hiding id:', id);
                     document.getElementById(id).style.display = 'none';
                 });
-            }, 3000);
+            }, 3500);
             alert('I dont know if you caught a snag or what but its coming out of your check');
         }
     }
