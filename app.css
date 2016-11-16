@@ -2,18 +2,17 @@
   text-align: center;
 }
 header {
-  height: 30px;
-  text-align:center;
+  height: 45px;
   color: #4caf50;
-  padding: 20px;
+  font-size: 20px;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+45,6d0019+100;Brown+Red+3D */
-background: #a90329; /* Old browsers */
-background: -moz-linear-gradient(-45deg,  #a90329 0%, #8f0222 45%, #6d0019 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg,  #a90329 0%,#8f0222 45%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg,  #a90329 0%,#8f0222 45%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+  background: #a90329; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #a90329 0%, #8f0222 45%, #6d0019 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #a90329 0%,#8f0222 45%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #a90329 0%,#8f0222 45%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
 #floor .X {
 -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
 clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
@@ -22,11 +21,6 @@ height: 30px;
 width: 30px;
 }
 
-/*.btn btn-primary {
-  display:flex;
-  align-self: :center;
-
-}*/
 #A {
   position:absolute;
   margin-top: 12em;
@@ -101,7 +95,7 @@ width: 30px;
 }
 
 #scoreboard {
-  display: -webkit-flex;
+  display: block;
 }
 #vasScore {
   color: green;
@@ -116,7 +110,9 @@ width: 30px;
   margin-top: 40px;
  }
 #table {
-  position: absolute;
+  display: flex;
+  float: left;
+  clear: both;
   border: 3px solid silver;
   margin: 20px;
   width: 475px;
@@ -125,7 +121,7 @@ width: 30px;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  transition-background: 500ms;
+  /*transition-background: 500ms;*/
 }
 .fork {
   position: absolute;
@@ -144,8 +140,6 @@ width: 30px;
   margin-left: 8.5em;
   margin-top: 17em;
 }
-
-
 .knife {
   position: absolute;
   background-color: black;
@@ -225,25 +219,22 @@ width: 30px;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-
-
-
-
 .stopwatch {
- position: absolute;
- margin-left: 600px;
+ display:flex;
+ justify-content: center;
  font-family: "courier";
  }
- #stopWatchButton {
-  display: flex;
+
+#stopWatchButton {
+ /* display: flex;
   justify-content: center;
-  /*position: absolute;*/
+  /*position: absolute;*/*/
   width: auto;
  }
 
- #elapsedTime {
+#elapsedTime {
   position: absolute;
-  margin-top: 50px;
+  margin-top: 35px;
   /*margin-left: 620px;*/
   color: white;
   font-size: 50px;
